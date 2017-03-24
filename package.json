@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "d": "./deploy.sh"
+    "d": "sh ./deploy.sh"
   },
   "hexo": {
     "version": "3.2.2"
