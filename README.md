@@ -17,5 +17,5 @@
 ```
 ###部署命令
 ```
-npm run deploy            // 自动提交到gh-pages分支
+npm run d            // 自动提交到gh-pages分支
 ```
