@@ -15,16 +15,18 @@ tags:
 + [安装Git](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 	+ 提交代码、blog代码进行版本控制
 
-### 创建github库
+### 创建gitHub库
 + 命令行创建
 
  ```
  $ curl -u "userName" https://api.github.com/user/repos -d '{"name":"'blogName'"}'
  ```
 
-userName 为你github用户名
+	userName 为你github用户名
 
-blogName 你需要创建github库名字
+	blogName 你需要创建github库名字
+
+这个库创建重要用于网站源代码的管理
 
 + [网页创建](https://github.com/new)
 
@@ -41,16 +43,19 @@ $ npm i -g hexo-cli                      // 安装hexo模块
 $ cd ~/Desktop/ && mkdir blog && cd blog // 创建本地博客目录
 $ hexo init                              // 初始化博客
 ```
-### 添加远程库
+### 添加并关联远程仓库
 
 ```bash
+$ git init
 $ git remote add git@github.com:getjll/blog.git
 ```
 
-### 创建gitHub Pages分支
+### 创建getjll.github.io仓库
+
+用于部署生成的静态页面
 
 ```bash
-$ git checkout gh-pages                  // 用于部署生成的静态页面
+ $ curl -u "userName" https://api.github.com/user/repos -d '{"name":"'getjll.github.io'"}'
 ```
 ### 添加部署脚本
 
@@ -66,9 +71,8 @@ cd public
 git init
 git add -A
 git commit -m 'update site'
-git push -f git@github.com:getjll/blog.git master:gh-pages // 这里替换成自己的分支
+git push -f git@github.com:getjll/getjll.github.io.git master // 这里替换成自己的分支
 ```
-
 打开package.json文件向 scripts 添加如下字段
 
 ```
@@ -76,5 +80,18 @@ git push -f git@github.com:getjll/blog.git master:gh-pages // 这里替换成自
     "d": "sh ./deploy.sh"
   },
 ```
+
+部署命令
+
+```
+$ npm run d
+```
+
+### [自定义域名](https://help.github.com/articles/setting-up-a-custom-subdomain/)
+
+```
+$ echo getjll.com source/CNAME  getjll.com替换成你自己申请并解析的域名
+```
+hexo会将source的文件自动拷贝到生成目录
 
 
