@@ -69,3 +69,12 @@ git commit -m 'update site'
 git push -f git@github.com:getjll/blog.git master:gh-pages // 这里替换成自己的分支
 ```
 
+打开package.json文件向 scripts 添加如下字段
+
+```
+  "scripts": {
+    "d": "sh ./deploy.sh"
+  },
+```
+
+
