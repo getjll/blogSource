@@ -17,5 +17,5 @@
 ```
 ###部署命令
 ```
-npm run d            // 自动提交到gh-pages分支
+npm run d                 // 提交到getjll.github.io master分支
 ```
