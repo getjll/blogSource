@@ -9,6 +9,7 @@ description: 前端、全栈
 author: getjll
 language:
 timezone:
+disqus_shortname: getjll
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
