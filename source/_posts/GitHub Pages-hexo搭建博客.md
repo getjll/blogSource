@@ -18,7 +18,7 @@ tags:
 ### 创建gitHub库
 + 命令行创建
 
- ```
+ ```bash
  $ curl -u "userName" https://api.github.com/user/repos -d '{"name":"'blogName'"}'
  ```
 
@@ -64,7 +64,7 @@ $ mkdir deploy.sh && open deplay.sh
 ```
 向 deploy.sh添加如下代码
 
-```
+```bash
 hexo clean
 hexo g
 cd public
@@ -75,7 +75,7 @@ git push -f git@github.com:getjll/getjll.github.io.git master // 这里替换成
 ```
 打开package.json文件向 scripts 添加如下字段
 
-```
+```json
   "scripts": {
     "d": "sh ./deploy.sh"
   },
@@ -83,7 +83,7 @@ git push -f git@github.com:getjll/getjll.github.io.git master // 这里替换成
 
 部署命令
 
-```
+```bash
 $ npm run d
 ```
 
@@ -93,5 +93,3 @@ $ npm run d
 $ echo getjll.com source/CNAME  getjll.com替换成你自己申请并解析的域名
 ```
 hexo会将source的文件自动拷贝到生成目录
-
-
