@@ -41,7 +41,7 @@ tags:
 6. ![提示修改DNS服务器](/images/addSsl/changeNameservers.png)
 	+ aragorn.ns.cloudflare.com
 	+ zita.ns.cloudflare.com
-	
+
 	cloudflare的DNS服务器，需要将域名DNS指定成这两个
 
 ### 修改DNS服务器
@@ -51,11 +51,11 @@ tags:
 
 	![DNS修改](/images/addSsl/changeDNSServer1.png)
  2. 输入在cloudflare得到的两个DNS服务器
-	
+
 	![DNS修改输入](/images/addSsl/changeDNSServer2.png)
  3. 返回cloudflare查看，设置正确结果
  	![设置正确](/images/addSsl/changeDNSSuccess.png)
- 	
+
 ### 设置Page Rules
 
 1. ![](/images/addSsl/createPageRules.png)
