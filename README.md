@@ -15,7 +15,7 @@
 │   └── CNAME             // 自定义域名文件
 └── themes
 ```
-###部署命令
+### 部署命令
 ```
 npm run d                 // 提交到getjll.github.io master分支
 ```
